@@ -48,7 +48,6 @@ class UsuariosController extends AbstractController {
 				$this->usuarios->grabar();
 
 				$id_actual = $this->usuarios->getUltimoId();
-
 				$this->relacionusuariostipos->poblarPropiedades($id_actual);
 
 				$this->relacionusuariostipos->grabar();

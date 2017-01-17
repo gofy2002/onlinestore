@@ -24,7 +24,7 @@ class Usuarios extends UsuariosDao{
 		$this->cumpleanios = isset($datos['cumpleanios']) ? trim($datos['cumpleanios']) : date('Y-m-d G:i:s');
 		$this->telefono = isset($datos['telefono']) ? trim($datos['telefono']) : null;
 		$this->email = isset($datos['email']) ? trim($datos['email']) : null;		
-		//$this->creado_en = isset($datos['creado_en']) ? trim($datos['creado_en']) : date('Y-m-d G:i:s');
+		$this->creado_en = isset($datos['creado_en']) ? trim($datos['creado_en']) : date('Y-m-d G:i:s');
 	}
 
 

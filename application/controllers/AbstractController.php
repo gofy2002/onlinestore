@@ -33,6 +33,8 @@ abstract class AbstractController extends CI_Controller
 																'class' => 'form-control input-lg',
 																'required' => 'required',
 																'data-error' => 'Dato requerido',
+																'tabindex' => '1',
+																'placeholder' => 'Nombres',
 																'value' => isset($datosPost['nombre']) ? $datosPost['nombre'] : null,
 
 															),
@@ -41,6 +43,8 @@ abstract class AbstractController extends CI_Controller
 																'class' => 'form-control input-lg',
 																'required' => 'required',
 																'data-error' => 'Dato requerido',
+																'tabindex' => '2',
+																'placeholder' => 'Apellidos',
 																'value' => isset($datosPost['apellidos']) ? $datosPost['apellidos'] : null,
 
 															),			
@@ -48,6 +52,7 @@ abstract class AbstractController extends CI_Controller
 																'id' => 'email',
 																'type'=>'email',
 																'placeholder'=>'Campo Email',
+																'tabindex' => '3',
 																'class' => 'form-control input-lg',
 																'required' => 'required',
 																'data-error' => 'Dato requerido',
@@ -58,17 +63,9 @@ abstract class AbstractController extends CI_Controller
 																'id' => 'telefono',
 																'class' => 'form-control input-lg',
 																'data-error' => 'Dato requerido',
+																'tabindex' => '4',
+																'placeholder' => 'Telefono',
 																'value' => isset($datosPost['telefono']) ? $datosPost['telefono'] : null,
-
-															),	
-											'password' => array('name' => 'password',
-																'id' => 'password',
-																'type'=>'password',
-																'placeholder'=>'Password',
-																'class' => 'form-control input-lg',
-																'required' => 'required',				
-																'data-error' => 'Dato requerido',
-																'value' => isset($datosPost['password']) ? $datosPost['password'] : null,
 
 															),	
 
@@ -77,9 +74,39 @@ abstract class AbstractController extends CI_Controller
 																'class' => 'form-control input-lg',
 																'required' => 'required',
 																'data-error' => 'Dato requerido',
+																'tabindex' => '5',
+																'placeholder' => 'Fecha Nacimiento',
 																'value' => isset($datosPost['cumpleanios']) ? $datosPost['cumpleanios'] : null,
 
 															),	
+
+											'password' => array('name' => 'password',
+																'id' => 'password',
+																'type'=>'password',
+																'placeholder'=>'Password',
+																'tabindex' => '6',
+																'class' => 'form-control input-lg',
+																'required' => 'required',				
+																'data-error' => 'Dato requerido',
+																'value' => isset($datosPost['password']) ? $datosPost['password'] : null,
+
+															),	
+
+
+											'password_confirmation' => array('name' => 'password_confirmation',
+																'id' => 'password_confirmation',
+																'type'=>'password',
+																'placeholder'=>'Confirme Password',
+																'tabindex' => '7',
+																'class' => 'form-control input-lg',
+																'required' => 'required',				
+																'data-error' => 'Dato requerido',
+																'data-match-error' => 'Los passsword no coinciden',
+																'data-match' => '#password',
+																'value' => isset($datosPost['password']) ? $datosPost['password'] : null,
+
+															),	
+
 
 /**											'id' => array('name' => 'id',
 																'id' => 'id',
