@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|extra|robots\.txt|zip_radius\.php|zip_radius_ca\.php)
+RewriteRule ^(.*)$ /index.php/$1 [L]
